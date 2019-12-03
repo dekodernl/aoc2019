@@ -7,7 +7,7 @@
 
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from day03input import data
+from day_03_puzzle_input import puzzle_input 
 
 def get_moves(data):
     moves = []
@@ -30,9 +30,9 @@ def move(pos, move, grid):
     return (pos, grid)
 
 posA, posB, gridA, gridB = [0,0], [0,0], [], []
-for moveA in get_moves(data[0]):
+for moveA in get_moves(puzzle_input[0]):
     posA, gridA = move(posA, moveA, gridA) 
-for moveB in get_moves(data[1]):
+for moveB in get_moves(puzzle_input[1]):
     posB, gridB = move(posB, moveB, gridB) 
 
 intersections = list(set(gridA) & set(gridB))

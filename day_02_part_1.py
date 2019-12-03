@@ -7,28 +7,28 @@
 
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from day02input import data
+from day_02_puzzle_input import puzzle_input 
 
-data[1] = 12
-data[2] = 2
-datalen = len(data)
+puzzle_input[1] = 12
+puzzle_input[2] = 2
+puzzle_inputlen = len(puzzle_input)
 opdex = 0
 
-while data[opdex] != 99:
-    if data[opdex] == 1:
-        a = data[data[(opdex + 1)]]
-        b = data[data[(opdex + 2)]]
-        opdex_write = data[opdex + 3]
-        if opdex_write > datalen:
+while puzzle_input[opdex] != 99:
+    if puzzle_input[opdex] == 1:
+        a = puzzle_input[puzzle_input[(opdex + 1)]]
+        b = puzzle_input[puzzle_input[(opdex + 2)]]
+        opdex_write = puzzle_input[opdex + 3]
+        if opdex_write > puzzle_inputlen:
             opdex_write = 0
-        data[opdex_write] = a + b
-    elif data[opdex] == 2:
-        a = data[data[(opdex + 1)]]
-        b = data[data[(opdex + 2)]]
-        opdex_write = data[opdex + 3]
-        if opdex_write > datalen:
+        puzzle_input[opdex_write] = a + b
+    elif puzzle_input[opdex] == 2:
+        a = puzzle_input[puzzle_input[(opdex + 1)]]
+        b = puzzle_input[puzzle_input[(opdex + 2)]]
+        opdex_write = puzzle_input[opdex + 3]
+        if opdex_write > puzzle_inputlen:
             opdex_write = 0
-        data[opdex_write] = a * b
+        puzzle_input[opdex_write] = a * b
     opdex += 4
 
-print(data[0])
+print(puzzle_input[0])

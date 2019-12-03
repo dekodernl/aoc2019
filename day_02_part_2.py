@@ -7,34 +7,34 @@
 
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from day02input import data
+from day_02_puzzle_input import puzzle_input 
 
-datalen = len(data)
+puzzle_inputlen = len(puzzle_input)
 
-def run(data, x, y):
+def run(puzzle_input, x, y):
     opdex = 0
-    data[1] = x
-    data[2] = y
-    while data[opdex] != 99:
-        if data[opdex] == 1:
-            a = data[data[(opdex + 1)]]
-            b = data[data[(opdex + 2)]]
-            opdex_write = data[opdex + 3]
-            if opdex_write > datalen:
+    puzzle_input[1] = x
+    puzzle_input[2] = y
+    while puzzle_input[opdex] != 99:
+        if puzzle_input[opdex] == 1:
+            a = puzzle_input[puzzle_input[(opdex + 1)]]
+            b = puzzle_input[puzzle_input[(opdex + 2)]]
+            opdex_write = puzzle_input[opdex + 3]
+            if opdex_write > puzzle_inputlen:
                 opdex_write = 0
-            data[opdex_write] = a + b
-        elif data[opdex] == 2:
-            a = data[data[(opdex + 1)]]
-            b = data[data[(opdex + 2)]]
-            opdex_write = data[opdex + 3]
-            if opdex_write > datalen:
+            puzzle_input[opdex_write] = a + b
+        elif puzzle_input[opdex] == 2:
+            a = puzzle_input[puzzle_input[(opdex + 1)]]
+            b = puzzle_input[puzzle_input[(opdex + 2)]]
+            opdex_write = puzzle_input[opdex + 3]
+            if opdex_write > puzzle_inputlen:
                 opdex_write = 0
-            data[opdex_write] = a * b
+            puzzle_input[opdex_write] = a * b
         opdex += 4
 
-    return data[0]
+    return puzzle_input[0]
 
 for x in range(0, 100):
     for y in range(0, 100):
-        if run(data[:], x, y) == 19690720:
+        if run(puzzle_input[:], x, y) == 19690720:
             print(100 * x + y)

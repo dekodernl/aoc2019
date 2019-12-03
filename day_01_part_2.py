@@ -7,11 +7,11 @@
 
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from day01data import data
+from day_01_puzzle_input import puzzle_input 
 import math
 
 total_mass = 0
-for mass in [math.floor(int(mass) / 3) - 2 for mass in data]:
+for mass in [math.floor(int(mass) / 3) - 2 for mass in puzzle_input]:
     while mass > 0:
         total_mass += mass
         mass = math.floor(mass / 3) - 2
