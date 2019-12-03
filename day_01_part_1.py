@@ -7,11 +7,6 @@
 
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-import math
-masses = []
-for mass in [(int(mass)/3)-2 for mass in open('day01input.txt', 'r')]:
-    while mass > 0:
-        masses.append(mass)
-        mass = math.floor(mass/3) - 2
-print(sum(masses))
+from day01data import data
 
+print(sum([int((int(mass) / 3)) - 2 for mass in data]))
