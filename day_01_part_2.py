@@ -7,7 +7,7 @@
 
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from day_01_puzzle_input import puzzle_input 
+from day_01_puzzle_input import puzzle_input
 import math
 
 total_mass = 0

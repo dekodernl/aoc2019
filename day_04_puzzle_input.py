@@ -1,3 +1,3 @@
 data = []
 
-tests = [{data:[], valid:[]}]
+tests = [{data: [], valid: []}]

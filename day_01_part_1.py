@@ -7,6 +7,6 @@
 
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from day_01_puzzle_input import puzzle_input 
+from day_01_puzzle_input import puzzle_input
 
 print(sum([int((int(mass) / 3)) - 2 for mass in puzzle_input]))

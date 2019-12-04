@@ -7,9 +7,10 @@
 
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from day_02_puzzle_input import puzzle_input 
+from day_02_puzzle_input import puzzle_input
 
 puzzle_inputlen = len(puzzle_input)
+
 
 def run(puzzle_input, x, y):
     opdex = 0
@@ -33,6 +34,7 @@ def run(puzzle_input, x, y):
         opdex += 4
 
     return puzzle_input[0]
+
 
 for x in range(0, 100):
     for y in range(0, 100):

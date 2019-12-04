@@ -7,7 +7,7 @@
 
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from day_02_puzzle_input import puzzle_input 
+from day_02_puzzle_input import puzzle_input
 
 puzzle_input[1] = 12
 puzzle_input[2] = 2
